@@ -29,4 +29,14 @@ class OperacionesTDDTest {
     public void test5() {
         assertEquals(-1, OperacionesTDD.suma("1,2,"));
     }
+
+    @Test
+    public void test6() {
+        assertEquals(-1, OperacionesTDD.suma("1,2,-2"));
+    }
+
+    @Test
+    public void test7() {
+        assertEquals(5, OperacionesTDD.suma("5,1002"));
+    }
 }
