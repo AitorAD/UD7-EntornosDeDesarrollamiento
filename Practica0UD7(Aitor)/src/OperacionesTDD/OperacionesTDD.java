@@ -8,6 +8,7 @@ public class OperacionesTDD {
             for (String s : aux) {
                 output += Integer.parseInt(s);
             }
+            if (input.charAt(input.length() - 1) == ',') output = -1;
         }
         return output;
     }
