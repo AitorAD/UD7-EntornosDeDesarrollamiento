@@ -1,3 +1,5 @@
+package FizzBuzz;
+
 public class FizzBuzz {
     private static final int FIZZ = 3;
     private static final int BUZZ = 5;
