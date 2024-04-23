@@ -58,4 +58,25 @@ class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz.juego(3));
     }
 
+
+    @Test
+    public void test8() {
+        assertEquals("Fizz", FizzBuzz.juego(3));
+    }
+
+    @Test
+    public void test9() {
+        assertEquals("Fizz", FizzBuzz.juego(3));
+    }
+
+    @Test
+    public void test10() {
+        assertEquals("Fizz", FizzBuzz.juego(3));
+    }
+
+    @Test
+    public void test11() {
+        assertEquals("Fizz", FizzBuzz.juego(3));
+    }
+
 }
