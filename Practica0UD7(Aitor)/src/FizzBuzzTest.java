@@ -52,12 +52,10 @@ class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz.juego(3));
     }
 
-
     @Test
     public void test7() {
         assertEquals("Fizz", FizzBuzz.juego(3));
     }
-
 
     @Test
     public void test8() {
@@ -79,4 +77,23 @@ class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz.juego(3));
     }
 
+    @Test
+    public void test12() {
+        assertEquals("Fizz", FizzBuzz.juego(3));
+    }
+
+    @Test
+    public void test13() {
+        assertEquals("13", FizzBuzz.juego(13));
+    }
+
+    @Test
+    public void test14() {
+        assertEquals("14", FizzBuzz.juego(14));
+    }
+
+    @Test
+    public void test15() {
+        assertEquals("FizzBuzz", FizzBuzz.juego(15));
+    }
 }
