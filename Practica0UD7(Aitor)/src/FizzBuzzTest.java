@@ -5,95 +5,27 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FizzBuzzTest {
-    /*
+
     @ParameterizedTest
     @CsvSource({
+            "0, FizzBuzz",
             "1, 1",
             "2, 2",
             "3, Fizz",
-            //"4", "5", "6","7", "8", "9", "10", "11", "12", "13", "14", "15"
+            "4, 4",
+            "5, Buzz",
+            "6, Fizz",
+            "7, 7",
+            "8, 8",
+            "9, Fizz",
+            "10, Buzz",
+            "11, 11",
+            "12, Fizz",
+            "13, 13",
+            "14, 14",
+            "15, FizzBuzz",
     })
     public void testFizzBuzz(String input, String output) {
-        assertEquals(output, input);
-    }
-    */
-    @Test
-    public void test0() {
-        assertEquals("FizzBuzz", FizzBuzz.juego(0));
-    }
-
-    @Test
-    public void test1() {
-        assertEquals("1", FizzBuzz.juego(1));
-    }
-
-    @Test
-    public void test2() {
-        assertEquals("2", FizzBuzz.juego(2));
-    }
-
-    @Test
-    public void test3() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test4() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test5() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test6() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test7() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test8() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test9() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test10() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test11() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test12() {
-        assertEquals("Fizz", FizzBuzz.juego(3));
-    }
-
-    @Test
-    public void test13() {
-        assertEquals("13", FizzBuzz.juego(13));
-    }
-
-    @Test
-    public void test14() {
-        assertEquals("14", FizzBuzz.juego(14));
-    }
-
-    @Test
-    public void test15() {
-        assertEquals("FizzBuzz", FizzBuzz.juego(15));
+        assertEquals(output, FizzBuzz.juego(Integer.parseInt(input)));
     }
 }
