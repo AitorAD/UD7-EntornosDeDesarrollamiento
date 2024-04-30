@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 public class DivisiblePor3 {
     private static final int DIVISOR = 3;
     private static final int RESTO = 0;
@@ -17,10 +19,8 @@ public class DivisiblePor3 {
     }
 
     private static boolean isValidResto(int n) {
-        int dividendo = Integer.parseInt(getDividendo(n));
-        if (dividendo % DIVISOR == RESTO) {
-            return true;
-        }
-        return false;
+        BigInteger dividendo = new BigInteger(getDividendo(n));
+        BigInteger resto = dividendo.mod(BigInteger.valueOf(DIVISOR));
+        return resto.equals(BigInteger.valueOf(RESTO));
     }
 }
