@@ -1,0 +1,10 @@
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class DivisiblePor3Test {
+    @Test
+    public void testEntrada_2_Salida_SI() {
+        assertEquals("SI", DivisiblePor3.esDivisible(2));
+    }
+}
