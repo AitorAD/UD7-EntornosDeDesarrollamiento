@@ -10,7 +10,11 @@ public class Zapping {
             if (canalOrigen != canalDestino) {
                 nClic = Math.abs(canalOrigen - canalDestino);
                 if (nClic >= MEDIA_CHANEL) {
-                    nClic = Math.abs((canalOrigen + MAX_CHANEL) - canalDestino);
+                    if (canalOrigen < canalDestino) {
+                        nClic = Math.abs((canalOrigen + MAX_CHANEL) - canalDestino);
+                    } else {
+                        nClic = Math.abs((canalOrigen - MAX_CHANEL) - canalDestino);
+                    }
                 }
             }
         }

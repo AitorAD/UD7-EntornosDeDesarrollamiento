@@ -27,4 +27,9 @@ class ZappingTest {
     public void test_Origen_5_Destino_63_nClicls_41() {
         assertEquals(41, Zapping.cambiaCanal(5,63));
     }
+
+    @Test
+    public void test_Origen_63_Destino_5_nClicls_41() {
+        assertEquals(41, Zapping.cambiaCanal(63,5));
+    }
 }
