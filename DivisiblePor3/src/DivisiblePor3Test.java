@@ -1,40 +1,21 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DivisiblePor3Test {
-    @Test
-    public void testEntrada_2_Salida_SI() {
-        assertEquals("SI", DivisiblePor3.esDivisible(2));
-    }
-
-    @Test
-    public void testEntrada_6_Salida_SI() {
-        assertEquals("SI", DivisiblePor3.esDivisible(6));
-    }
-
-    @Test
-    public void testEntrada_4_Salida_NO() {
-        assertEquals("NO", DivisiblePor3.esDivisible(4));
-    }
-
-    @Test
-    public void testEntrada_13_Salida_NO() {
-        assertEquals("NO", DivisiblePor3.esDivisible(13));
-    }
-
-    @Test
-    public void testEntrada_0_Salida_NO() {
-        assertEquals("NO", DivisiblePor3.esDivisible(0));
-    }
-
-    @Test
-    public void testEntrada_20_Salida_SI() {
-        assertEquals("SI", DivisiblePor3.esDivisible(20));
-    }
-
-    @Test
-    public void testEntrada_100_Salida_SI() {
-        assertEquals("NO", DivisiblePor3.esDivisible(100));
+    @ParameterizedTest
+    @CsvSource({
+            "2, SI",
+            "6, SI",
+            "4, NO",
+            "13, NO",
+            "0, NO",
+            "20, SI",
+            "100, NO",
+    })
+    public void testsDivisiblePor3(String input, String output) {
+        assertEquals(output, DivisiblePor3.esDivisible(Integer.parseInt(input)));
     }
 }
