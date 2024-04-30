@@ -5,8 +5,8 @@ public class DivisiblePor3 {
     private static final int RESTO = 0;
 
     public static String esDivisible(int n) {
-        String output = "NO";
-        if (isValidResto(n)) output = "SI";
+        String output = "SI";
+        if (n == 0 || !isValidResto(n)) output = "NO";
         return output;
     }
 

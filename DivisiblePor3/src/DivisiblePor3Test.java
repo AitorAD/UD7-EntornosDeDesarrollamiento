@@ -22,4 +22,9 @@ class DivisiblePor3Test {
     public void testEntrada_13_Salida_NO() {
         assertEquals("NO", DivisiblePor3.esDivisible(13));
     }
+
+    @Test
+    public void testEntrada_0_Salida_NO() {
+        assertEquals("NO", DivisiblePor3.esDivisible(0));
+    }
 }
