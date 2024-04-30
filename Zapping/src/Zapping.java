@@ -4,9 +4,10 @@ public class Zapping {
 
     public static int cambiaCanal(int canalOrigen, int canalDestino) {
         int nClic = 0;
+
         if (isValidChanel(canalOrigen) && isValidChanel(canalDestino)) {
             if (canalOrigen != canalDestino) {
-                nClic++;
+                nClic = (canalOrigen + canalDestino) - canalDestino;
             }
         }
         return nClic;
