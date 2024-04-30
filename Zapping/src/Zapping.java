@@ -1,6 +1,6 @@
 public class Zapping {
     private static final int MAX_CHANEL = 99;
-    private static final int MIN_CHANEL = 0;
+    private static final int MIN_CHANEL = 1;
     private static final int MEDIA_CHANEL = 50;
 
     public static int cambiaCanal(int canalOrigen, int canalDestino) {
