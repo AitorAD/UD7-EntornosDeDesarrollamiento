@@ -12,7 +12,7 @@ public class PasswordVerify {
         boolean hasSpecialChar = hasSpecialChar(password);
         boolean isValid = isValidLength && hasTwoDigits && hasUpperCase && hasSpecialChar;
 
-        msg.deleteCharAt(msg.lastIndexOf("\n"));
+        if (msg.lastIndexOf("\n") != -1) msg.deleteCharAt(msg.lastIndexOf("\n"));
         return new IsValidPassword(isValid, msg.toString());
     }
 
