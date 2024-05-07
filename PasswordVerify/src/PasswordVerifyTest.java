@@ -27,12 +27,18 @@ class PasswordVerifyTest {
         assertEquals(expected, PasswordVerify.verifyPassword("hola"));
     }
 
-    /*
     @Test
     public void testEntrada_holacaracola() {
-        assertEquals(false, PasswordVerify.isValidPassword());
+        IsValidPassword expected = new IsValidPassword(false,
+                "La contrasenya ha de contenir almenys 2 números\n" +
+                        "La contrasenya ha de contenir almenys una lletra majúscula\n" +
+                        "La contrasenya ha de contenir almenys un caràcter especial"
+        );
+
+        assertEquals(expected, PasswordVerify.verifyPassword("holacaracola"));
     }
 
+/*
     @Test
     public void testEntrada_hola12() {
         assertEquals(false, PasswordVerify.isValidPassword());
