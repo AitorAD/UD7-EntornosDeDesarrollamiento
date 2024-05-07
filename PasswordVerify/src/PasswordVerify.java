@@ -3,15 +3,17 @@ import java.util.regex.Pattern;
 
 public class PasswordVerify {
     public static IsValidPassword verifyPassword(String password) {
-        String msg = "";
+        StringBuilder msg = new StringBuilder();
         boolean isValid = false;
 
-        if (password.length() < 8) msg += "La contrasenya ha de tenir almenys 8 caràcters\n";
-        if (!password.matches("\\D*\\d{2}")) msg += "La contrasenya ha de contenir almenys 2 números\n";
-        if (!isValidContent("[A-Z]", password)) msg += "La contrasenya ha de contenir almenys una lletra majúscula\n";
-        if (!isValidContent("[^a-zA-Z0-9\\s]", password)) msg += "La contrasenya ha de contenir almenys un caràcter especial";
+        if (password.length() < 8) msg.append("La contrasenya ha de tenir almenys 8 caràcters\n");
+        if (!password.matches("\\D*\\d{2}")) msg.append("La contrasenya ha de contenir almenys 2 números\n");
+        if (!isValidContent("[A-Z]", password)) msg.append("La contrasenya ha de contenir almenys una lletra majúscula\n");
+        if (!isValidContent("[^a-zA-Z0-9\\s]", password)) msg.append("La contrasenya ha de contenir almenys un caràcter especial\n");
 
-        return new IsValidPassword(isValid, msg);
+
+        msg.deleteCharAt(msg.lastIndexOf("\n"));
+        return new IsValidPassword(isValid, msg.toString());
     }
 
     public static boolean isValidContent(String regex, String password) {

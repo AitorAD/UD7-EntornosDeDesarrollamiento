@@ -40,7 +40,6 @@ public class IsValidPassword {
 
     @Override
     public String toString() {
-        return "isValidPassword: " + isValidPassword +
-                " " + msg;
+        return msg;
     }
 }
