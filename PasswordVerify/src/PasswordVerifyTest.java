@@ -111,12 +111,16 @@ class PasswordVerifyTest {
         assertEquals(expected, PasswordVerify.verifyPassword("holacaracola12"));
     }
 
-/*
     @Test
     public void testEntrada_holacaracolaExclamacion() {
-        assertEquals(false, PasswordVerify.isValidPassword());
-    }
+        IsValidPassword expected = new IsValidPassword(false,
+                "La contrasenya ha de contenir almenys 2 números\n" +
+                        "La contrasenya ha de contenir almenys una lletra majúscula"
+        );
 
+        assertEquals(expected, PasswordVerify.verifyPassword("holacaracola!"));
+    }
+/*
     @Test
     public void testEntrada_holacaracolA() {
         assertEquals(false, PasswordVerify.isValidPassword());
