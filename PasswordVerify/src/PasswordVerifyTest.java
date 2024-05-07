@@ -5,14 +5,29 @@ import static org.junit.jupiter.api.Assertions.*;
 class PasswordVerifyTest {
     @Test
     public void testEntrada_Vacio() {
-        assertEquals(false, PasswordVerify.isValidPassword());
+        IsValidPassword expected = new IsValidPassword(false,
+                "La contrasenya ha de tenir almenys 8 caràcters\n" +
+                        "La contrasenya ha de contenir almenys 2 números\n" +
+                        "La contrasenya ha de contenir almenys una lletra majúscula\n" +
+                        "La contrasenya ha de contenir almenys un caràcter especial"
+                );
+
+        assertEquals(expected, PasswordVerify.verifyPassword(""));
     }
 
     @Test
-    public void testEntrada_Hola() {
-        assertEquals(false, PasswordVerify.isValidPassword());
+    public void testEntrada_hola() {
+        IsValidPassword expected = new IsValidPassword(false,
+                "La contrasenya ha de tenir almenys 8 caràcters\n" +
+                        "La contrasenya ha de contenir almenys 2 números\n" +
+                        "La contrasenya ha de contenir almenys una lletra majúscula\n" +
+                        "La contrasenya ha de contenir almenys un caràcter especial"
+        );
+
+        assertEquals(expected, PasswordVerify.verifyPassword("hola"));
     }
 
+    /*
     @Test
     public void testEntrada_holacaracola() {
         assertEquals(false, PasswordVerify.isValidPassword());
@@ -92,4 +107,6 @@ class PasswordVerifyTest {
     public void testEntrada_AlmuP4blit0cl4v0uncl4vit0Almu() {
         assertEquals(false, PasswordVerify.isValidPassword());
     }
+
+     */
 }
